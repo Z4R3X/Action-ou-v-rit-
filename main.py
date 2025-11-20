@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import Base, engine, SessionLocal
 from models import User
-from schemas import UserCreate, UserResponse
+from shemas import UserCreate, UserResponse
 from passlib.context import CryptContext
 
 # --- Sécurité pour hash des mots de passe ---
