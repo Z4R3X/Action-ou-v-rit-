@@ -1,0 +1,13 @@
+from sqlalchemy import Column, Integer, String
+from database import Base
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, index=True)
+    name = Column(String)
+    pseudo = Column(String, unique=True, index=True)
+    age = Column(Integer)
+    hashed_password = Column(String)
+    avatar_url = Column(String, nullable=True)
